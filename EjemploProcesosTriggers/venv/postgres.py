@@ -1,6 +1,6 @@
 import psycopg2
 
-# Establish a connection to the PostgreSQL database
+# Establecer conexion
 DB_NAME = "zdmcnqcr"
 DB_USER = "zdmcnqcr"
 DB_PASS = "XBadbsEmaLsWTet1jwyTARTA07wU45vh"
@@ -30,6 +30,7 @@ cur = conn.cursor()
 # );
 # """
 # cur.execute(log_table_sql)
+
 # Create a procedure
 procedure_sql = """
 CREATE OR REPLACE FUNCTION agregar_log_asignatura()
@@ -70,6 +71,10 @@ rows = cur.fetchall()
 for row in rows:
     print(row)
 
+cur.execute("SELECT * FROM asignatura;")
+rows = cur.fetchall()
+for row in rows:
+    print(row)
 
 
 cur.close()
