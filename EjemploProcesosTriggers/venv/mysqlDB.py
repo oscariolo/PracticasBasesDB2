@@ -77,15 +77,14 @@ class DataBaseMySQL:
 
 if __name__ == '__main__':
     db = DataBaseMySQL()
-    #db.crear_procedimiento_agregar_log_estudiante()
-    #db.crear_trigger_detectar_cambio_estudiante()
+    # db.crear_procedimiento_agregar_log_estudiante()
+    # db.crear_trigger_detectar_cambio_estudiante()
     db.mostrarEstudiantes()
     db.actualizarEstudiante(1, "Sebastian", 20)
     db.mostrarEstudiantes()
     db.mostrar_log_Estudiantes()
     db.conn.commit()
     db.cur.close()
-    
-    
+
 
     
